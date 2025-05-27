@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { Navbar } from "@/components/navbar"
 import { ThemeProvider } from "@/components/theme-provider"
+import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "https://i.postimg.cc/Zq3KxYqX/Favicon.png",
   },
-    generator: 'v0.dev'
+  generator: "v0.dev"
 }
 
 export default function RootLayout({
@@ -27,12 +28,18 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark">
           <Navbar />
           <main>{children}</main>
+
+          {/* ✅ Small native ad just before footer */}
+          <div className="w-full flex justify-center items-center my-4">
+            <div id="native-ad-wrapper" className="max-w-xs">
+              <Script
+                strategy="afterInteractive"
+                src="//pl26766194.profitableratecpm.com/43/e8/20/43e820e24bda4c34e6b1387ccf0e229f.js"
+              />
+            </div>
+          </div>
         </ThemeProvider>
       </body>
     </html>
   )
 }
-
-
-
-import './globals.css'
