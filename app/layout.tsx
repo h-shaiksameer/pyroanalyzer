@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "https://i.postimg.cc/Zq3KxYqX/Favicon.png",
   },
-  generator: "v0.dev"
+  
 }
 
 export default function RootLayout({
