@@ -28,16 +28,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark">
           <Navbar />
           <main>{children}</main>
-
-          {/* ✅ Small native ad just before footer */}
-          <div className="w-full flex justify-center items-center my-4">
-            <div id="native-ad-wrapper" className="max-w-xs">
-              <Script
-                strategy="afterInteractive"
-                src="//pl26766194.profitableratecpm.com/43/e8/20/43e820e24bda4c34e6b1387ccf0e229f.js"
-              />
-            </div>
-          </div>
+          
         </ThemeProvider>
       </body>
     </html>
